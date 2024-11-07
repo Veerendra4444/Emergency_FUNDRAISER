@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Fundraiser</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    
+}
+
+header {
+    background-color: #ff6f61;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    left: 50px;
+
+}
+.click{
+text-align: left;
+color: aliceblue;
+
+}
+ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    
+}
+li{
+    margin: 20px;
+    
+
+}
+a{
+            text-decoration: none;
+            color: aliceblue;
+}
+a:hover{
+    color: forestgreen;
+}
+main {
+    padding: 20px;
+}
+
+.about, .donate, .updates {
+    background: white;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+}
+.gallery {
+    width: 780px; 
+    height: 710px; 
+    overflow: hidden; 
+    position: relative;
+    position: absolute;
+    left: 1100px;
+    top: 230px;
+    border-radius: 60px;
+
+}
+
+.images {
+    display: flex;
+    animation: scroll 59s linear infinite; 
+}
+
+.images img {
+    width: 100vw; 
+    height: auto; 
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+
+.logo{
+    position: absolute;
+    left: 550px;
+    top: -30px;
+
+
+} 
+
+h2 {
+    color: #ff6f61;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="number"] {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e65c50;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ddd;
+    position: relative;
+    bottom: 0;
+    width: 10%;
+}
+.progress-bar {
+    background: #e9ecef;
+    border-radius: 4px;
+    height: 30px;
+    position: relative;
+    width: 1040px;
+    background: white;
+    border-radius: 8px;
+
+
+
+
+}
+
+#progressMeter {
+    
+    height: 100%;
+    width: 0%;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+
+
+
+ 
+ .body1{
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+ }
+ .contact-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.contact-section div {
+    width: 30%;
+}
+
+.contact-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.icon {
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 2em;
+    color: #fff;
+}
+
+.icon.facebook {
+    color: #4267B2;
+}
+
+.icon.instagram {
+    color: #E1306C;
+}
+
+.icon.twitter {
+    color: #1DA1F2;
+}
+
+.icon.youtube {
+    color: #FF0000;
+}
+
+.footer-note {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.footer-note a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-note a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+</style>
+<body>
+    <header>
+        <h1>Emergency Fundraiser</h1>
+        <p>Help us support those in need during this critical time.</p>
+        <div class="click">
+        <ul>
+<li><a href="#">HOME</a></li>
+<li><a href="http://127.0.0.1:3000/our programs.html" target="_blank">OUR PROGRAMS</a></li>
+<li><a href="http://127.0.0.1:3000/project/aboutus.html" target="_blank">ABOUT US</a></li>
+<li><a href="http://127.0.0.1:3000/project/contactus.html" target="_blank">CONTACT US</a></li>
+        </ul>
+        </div>
+    </header>
+    
+    <main>
+        <section class="about">
+            <h2>About the Cause</h2>
+            <p>We are raising funds for [Emergency Medical Cases and UnExpected Natural Disasters]. Your contributions will go directly to those affected.</p>
+        </section>
+
+        <section class="donate">
+            <h2>How You Can Help</h2>
+            <p>Your donation can make a real difference. Please consider donating today!</p>
+            <form action="https://example.com/donate" method="POST">
+                <label for="amount">Donation Amount:</label>
+                <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+                <button type="submit">Donate Now</button>
+            </form>
+        </section>
+        <section class="progress">
+            <h2>Total Raised</h2>
+            <div class="progress-bar">
+                <div id="progressMeter"></div>
+            </div>
+            <p id="totalAmount">₹0</p>
+        </section>
+        <section class="updates">
+            <h2>Latest Updates</h2>
+            <ul>
+                <p>Present No Updates are there ,If any Emergency Cases are heard by through our website definitely We see the updates </p>
+               <!-- <li>Update 1: [Insert update here]</li>
+                <li>Update 2: [Insert update here]</li>
+                <li>Update 3: [Insert update here]</li>-->
+            </ul>
+        </section>
+            <div class="gallery">
+                <div class="images">
+                    <img src="food.png" alt="Image 1">
+                    <img src="pilalu.png" alt="Image 2">
+                    <!--<img src="" alt="Image 3">-->
+                    <img src="kk.png" alt="Image 4">
+                </div>
+            </div>
+
+
+
+
+<!--         
+        <div class="img">
+         <img src="donate2.jpg" alt="Donate" height="500px" >
+
+         </div>
+     -->
+    <div class="logo">
+            <img src="logo_project-removebg-preview.png" alt="" height="200px" >
+   
+            </div> 
+        </div >
+            <div class="body1">
+            <div class="contact-section">
+                <div class="accreditations">
+                    <h2>Accreditations</h2>
+                    <p>Reg No: ###########</p>
+                    <p>PAN Card No: ###########</p>
+                    <p>CSR Reg No: ###########</p>
+                </div>
+            
+                <div class="head-office">
+                    <h2>Head Office</h2>
+                    <p>No. ###, 17th Cross Road,<br>
+                       35th Main Road, ## Nagar 6th Phase,<br>
+                       Bengaluru, kakinada</p>
+                    <p>+91-1234567890</p>
+                    <p>contact@EmergencyFundraiser.org</p>
+                </div>
+            
+                <div class="branch-office">
+                    <h2>Branch Office</h2>
+                    <p>Banaswadi&nbsp;&nbsp;Haveri&nbsp;&nbsp;Hyderabad&nbsp;&nbsp;Ponneri&nbsp;&nbsp;Vijayawada</p>
+                </div>
+            </div>
+            
+            <div class="social-icons">
+                <a href="##" class="icon facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="###" class="icon instagram"><i class="fab fa-instagram"></i></a>
+                <a href="####" class="icon twitter"><i class="fab fa-twitter"></i></a>
+                <a href="######" class="icon youtube"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <p class="footer-note">&Contact us at <a href="mailto:emergencyfundraiser@gmail.com">emergencyfundraiser@gmail.com</a> for more information.</p>
+            
+
+        </div>
+
+
+             
+             
+
+
+
+
+
+
+
+
+
+    </main>
+    
+
+</body>
+</html>
